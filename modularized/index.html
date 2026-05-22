@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DepOwl | Deposition Transcript Verification Engine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Background mesh -->
+  <div class="mesh" aria-hidden="true"></div>
+
+  <!-- ─────── HEADER ─────── -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">
+          Dep<span>Owl</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#use-cases">Workflows</a></li>
+          <li><a href="#platform">How It Works</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary nav-cta">Book a Demo</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#use-cases">Workflows</a>
+      <a href="#platform">How It Works</a>
+      <a href="#security">Security</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="btn btn-primary">Book a Demo</a>
+    </div>
+  </header>
+
+  <!-- ─────── HERO ─────── -->
+  <section class="hero section">
+    <div class="container">
+      <p class="hero-eyebrow">
+        Deposition-proofreading that respects the record.
+      </p>
+      <h1>
+        Clean transcripts.<br /><em>Auditable errata.</em>
+      </h1>
+      <p class="hero-sub">
+        DepOwl helps court reporters and legal teams spot transcription issues, flag uncertainties, and produce a professional errata packet&mdash;grounded in verbatim quotes and traceable locations.
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Book a Demo</a>
+        <a href="#use-cases" class="btn btn-ghost">Explore Workflows</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">50<span>pg</span></div>
+          <div class="stat-label">Chunked Reads (Reliability Gate)</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">3<span>+</span></div>
+          <div class="stat-label">Quality Ladders (RWSE, Index, Grammar)</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">0</div>
+          <div class="stat-label">Hallucinated Text (Single-File Authority)</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">7</div>
+          <div class="stat-label">Workflow Components</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────── USE CASES ─────── -->
+  <section id="use-cases" class="section">
+    <div class="container">
+      <span class="section-label">Workflows</span>
+      <h2 class="section-title">
+        DepOwl fits the way reporting actually works.
+      </h2>
+      <p class="section-sub">
+        Common deposition pain points&mdash;handled with discipline, traceability, and a clean deliverable you can stand behind.
+      </p>
+
+      <div class="cards-grid">
+        <div class="card fade-in">
+          <div class="card-icon">📝</div>
+          <h3>Transcript Proofreading</h3>
+          <p>Catch grammar, repeats, omissions, and malformed sentences&mdash;without inventing wording that isn&rsquo;t on the page.</p>
+          <span class="card-arrow">→</span>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">📋</div>
+          <h3>Errata-Ready Output</h3>
+          <p>Produce a polished correction/flag list designed for quick human verification and client delivery.</p>
+          <span class="card-arrow">→</span>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">🔍</div>
+          <h3>Real-Word Substitution (RWSE)</h3>
+          <p>Surface subtle &ldquo;real word, wrong word&rdquo; errors with confidence scoring so a reporter can validate fast.</p>
+          <span class="card-arrow">→</span>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">📑</div>
+          <h3>Index &amp; Exhibit Checks</h3>
+          <p>Verify that indices include page numbers (and flag missing/blank entries) before the file goes out.</p>
+          <span class="card-arrow">→</span>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">🌐</div>
+          <h3>ESL-Sensitive Flagging</h3>
+          <p>When wording may reflect accent/dialect, DepOwl errs toward &ldquo;flag for review&rdquo; instead of over-correcting.</p>
+          <span class="card-arrow">→</span>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">🔗</div>
+          <h3>Consistency Audits</h3>
+          <p>Spot mismatches when the same quoted exhibit language appears twice but doesn&rsquo;t match due to an error.</p>
+          <span class="card-arrow">→</span>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">⚙️</div>
+          <h3>Format Gating</h3>
+          <p>Detect text-extractability issues early (image-based PDFs, odd exports) so you don&rsquo;t waste cycles.</p>
+          <span class="card-arrow">→</span>
+        </div>
+        <div class="card fade-in">
+          <div class="card-icon">✅</div>
+          <h3>Second-Pass QA</h3>
+          <p>Run a clean &ldquo;verification sweep&rdquo; before delivery&mdash;focused on high-value categories that tend to slip.</p>
+          <span class="card-arrow">→</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────── PLATFORM ─────── -->
+  <section id="platform" class="section">
+    <div class="container">
+      <span class="section-label">How It Works</span>
+      <h2 class="section-title">
+        Precision, not vibes.
+      </h2>
+      <p class="section-sub">
+        DepOwl is built around strict grounding rules: the file is the authority, and every proposed change is traceable.
+      </p>
+
+      <div class="features-list">
+        <div class="feature-block fade-in">
+          <div class="feature-content">
+            <span class="section-label">Capability 01</span>
+            <h3>Single-File Authority</h3>
+            <p>DepOwl does not &ldquo;pattern-complete&rdquo; from other transcripts. If it isn&rsquo;t in your file verbatim, it doesn&rsquo;t exist&mdash;so you stay in control of the record.</p>
+            <div class="feature-tags">
+              <span class="tag">No pattern completion</span>
+              <span class="tag">No guesswork</span>
+              <span class="tag">Audit-friendly</span>
+              <span class="tag">Repeatable process</span>
+            </div>
+          </div>
+          <div class="feature-visual">
+            <div class="placeholder-icon">📄</div>
+            <span>Drop in: Ally/brand visual, or a 1-page &ldquo;rules summary&rdquo; screenshot</span>
+          </div>
+        </div>
+
+        <div class="feature-block reverse fade-in">
+          <div class="feature-content">
+            <span class="section-label">Capability 02</span>
+            <h3>Tiered Detection (RWSE + Micro-Rules)</h3>
+            <p>DepOwl combines targeted ladders&mdash;basic, advanced, and idiomatic checks&mdash;plus narrow high-confidence grammar micro-rules to catch subtle issues without over-editing.</p>
+            <div class="feature-tags">
+              <span class="tag">RWSE ladder</span>
+              <span class="tag">Confidence scoring</span>
+              <span class="tag">Grammar micro-rules</span>
+              <span class="tag">Flag-first safety</span>
+            </div>
+          </div>
+          <div class="feature-visual">
+            <div class="placeholder-icon">🎯</div>
+            <span>Drop in: &ldquo;RWSE confidence&rdquo; example card or annotated snippet</span>
+          </div>
+        </div>
+
+        <div class="feature-block fade-in">
+          <div class="feature-content">
+            <span class="section-label">Capability 03</span>
+            <h3>Location Anchoring</h3>
+            <p>Every finding is tied to an approximate page location and quoted text, so a reporter can verify quickly and confidently.</p>
+            <div class="feature-tags">
+              <span class="tag">Quoted evidence</span>
+              <span class="tag">Page anchors</span>
+              <span class="tag">Fast verification</span>
+            </div>
+          </div>
+          <div class="feature-visual">
+            <div class="placeholder-icon">📍</div>
+            <span>Drop in: sample &ldquo;Finding → Quote → Page&rdquo; layout</span>
+          </div>
+        </div>
+
+        <div class="feature-block reverse fade-in">
+          <div class="feature-content">
+            <span class="section-label">Capability 04</span>
+            <h3>Format-Aware Gates</h3>
+            <p>DepOwl checks whether a PDF is text-extractable and then processes in dependable chunks (e.g., 50 pages) to avoid the &ldquo;it worked once, then failed&rdquo; problem.</p>
+            <div class="feature-tags">
+              <span class="tag">Text-extractability gate</span>
+              <span class="tag">Chunked processing</span>
+              <span class="tag">Predictable runs</span>
+            </div>
+          </div>
+          <div class="feature-visual">
+            <div class="placeholder-icon">🚦</div>
+            <span>Drop in: &ldquo;Pre-flight checklist&rdquo; screenshot or diagram</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────── AGENTS / ROLES (tabbed) ─────── -->
+  <section id="agents" class="section">
+    <div class="container">
+      <span class="section-label">Under the Hood</span>
+      <h2 class="section-title">
+        The DepOwl workflow stack.
+      </h2>
+      <p class="section-sub">
+        Seven components working in concert&mdash;each designed to reduce risk, increase signal, and speed up human verification.
+      </p>
+
+      <div class="agents-wrap">
+        <div class="agents-tabs" id="agents-tabs">
+          <div class="agent-tab active" data-tab="0"><div class="agent-tab-dot"></div>Pre-Flight Gate</div>
+          <div class="agent-tab" data-tab="1"><div class="agent-tab-dot"></div>Proofread Pass</div>
+          <div class="agent-tab" data-tab="2"><div class="agent-tab-dot"></div>RWSE Ladder</div>
+          <div class="agent-tab" data-tab="3"><div class="agent-tab-dot"></div>Index Auditor</div>
+          <div class="agent-tab" data-tab="4"><div class="agent-tab-dot"></div>ESL Sensitivity</div>
+          <div class="agent-tab" data-tab="5"><div class="agent-tab-dot"></div>Micro-Rule Layer</div>
+          <div class="agent-tab" data-tab="6"><div class="agent-tab-dot"></div>Errata Packager</div>
+        </div>
+        <div class="agent-details">
+          <div class="agent-detail active">
+            <span class="section-label">Component 01</span>
+            <h3>Pre-Flight Gate</h3>
+            <p>Confirms the file is readable, text-extractable, and ready for a reliable pass. Prevents wasted time on image-based exports or problematic PDF structures.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+              <span class="tag">Extractability check</span>
+              <span class="tag">Chunk plan</span>
+              <span class="tag">Scope confirmation</span>
+            </div>
+          </div>
+          <div class="agent-detail">
+            <span class="section-label">Component 02</span>
+            <h3>Primary Proofread Pass</h3>
+            <p>Surfaces corrections and flags using strict grounding: quote what&rsquo;s wrong, propose what to change, and keep a clean separation between &ldquo;fix&rdquo; and &ldquo;verify.&rdquo;</p>
+            <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+              <span class="tag">Verbatim evidence</span>
+              <span class="tag">Flag-first safety</span>
+            </div>
+          </div>
+          <div class="agent-detail">
+            <span class="section-label">Component 03</span>
+            <h3>RWSE Detection Ladder</h3>
+            <p>Targets &ldquo;real word, wrong word&rdquo; substitutions&mdash;from obvious to idiomatic&mdash;then assigns confidence to help a reporter prioritize review.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+              <span class="tag">Basic / Advanced / Idiomatic</span>
+              <span class="tag">Confidence scoring</span>
+              <span class="tag">High-signal flags</span>
+            </div>
+          </div>
+          <div class="agent-detail">
+            <span class="section-label">Component 04</span>
+            <h3>Index &amp; Exhibit Auditor</h3>
+            <p>Checks indices for missing page numbers and flags blank entries&mdash;especially the Exhibit Index&mdash;so delivery is complete and professional.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+              <span class="tag">Index page numbers</span>
+              <span class="tag">Exhibit index checks</span>
+            </div>
+          </div>
+          <div class="agent-detail">
+            <span class="section-label">Component 05</span>
+            <h3>ESL Sensitivity Module</h3>
+            <p>When language may reflect dialect, accent, or ESL phrasing, DepOwl conservatively flags for confirmation rather than &ldquo;correcting&rdquo; into something untrue.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+              <span class="tag">Protects meaning</span>
+              <span class="tag">Reduces over-editing</span>
+            </div>
+          </div>
+          <div class="agent-detail">
+            <span class="section-label">Component 06</span>
+            <h3>Precision Grammar Micro-Rule Layer</h3>
+            <p>Narrow, high-confidence micro-rules catch subtle but important grammar slips (without attempting full punctuation rewrites).</p>
+            <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+              <span class="tag">High-confidence only</span>
+              <span class="tag">Minimal disruption</span>
+            </div>
+          </div>
+          <div class="agent-detail">
+            <span class="section-label">Component 07</span>
+            <h3>Errata &amp; Deliverables Packager</h3>
+            <p>Organizes findings into a clean, client-ready set: corrections, flags, and specialty categories&mdash;designed for quick review and easy communication.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+              <span class="tag">Corrections vs Flags</span>
+              <span class="tag">Reporter-friendly</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────── SECURITY ─────── -->
+  <section id="security" class="section">
+    <div class="container">
+      <span class="section-label">Security</span>
+      <h2 class="section-title">
+        Built for sensitive legal materials.
+      </h2>
+      <p class="section-sub">
+        DepOwl is designed around least-privilege access, controlled retention, and clear boundaries between your files and external systems.
+      </p>
+
+      <div class="security-grid">
+        <div class="security-card fade-in">
+          <div class="security-card-icon">🗄️</div>
+          <h4>Client-Controlled Retention</h4>
+          <p>Define how long files are kept, where they live, and who can access them. You set the rules; DepOwl follows them.</p>
+        </div>
+        <div class="security-card fade-in">
+          <div class="security-card-icon">🔒</div>
+          <h4>Encrypted Storage &amp; Transfer</h4>
+          <p>Files and outputs are protected in transit and at rest, with security practices aligned to professional services expectations.</p>
+        </div>
+        <div class="security-card fade-in">
+          <div class="security-card-icon">📊</div>
+          <h4>Audit-Friendly Outputs</h4>
+          <p>Every finding is grounded in quoted text and location anchoring&mdash;so teams can validate decisions without ambiguity.</p>
+        </div>
+        <div class="security-card fade-in">
+          <div class="security-card-icon">👥</div>
+          <h4>Role-Based Access</h4>
+          <p>Limit access by team role and job scope. Keep matters separated and visibility appropriate by default.</p>
+        </div>
+      </div>
+
+      <div class="integrations-row">
+        <span class="section-label" style="width:100%;margin-bottom:.5rem;">Fits Your Reporting Ecosystem</span>
+        <span class="integration-badge">Eclipse Exports</span>
+        <span class="integration-badge">StenoCAT Exports</span>
+        <span class="integration-badge">Case Catalyst (CCS)</span>
+        <span class="integration-badge">Text-based PDF</span>
+        <span class="integration-badge">RTF</span>
+        <span class="integration-badge">ASCII (when needed)</span>
+        <span class="integration-badge">SAML/SSO</span>
+        <span class="integration-badge">Google Workspace</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────── FAQ ─────── -->
+  <section id="faq" class="section">
+    <div class="container">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title">
+        Questions we hear from reporters.
+      </h2>
+
+      <div class="faq-list" id="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            How do you handle confidential information?
+            <span class="faq-chevron">▾</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              DepOwl is built around controlled retention and least-privilege access. You decide where files live, who can access them, and how long they&rsquo;re retained. We keep processing disciplined and scoped to the job file.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I know the output is accurate?
+            <span class="faq-chevron">▾</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              DepOwl separates &ldquo;corrections&rdquo; from &ldquo;flags,&rdquo; and grounds findings in verbatim quotes with location anchoring. When certainty is low, it flags instead of forcing a rewrite&mdash;so the reporter stays the authority.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            What file formats do you support?
+            <span class="faq-chevron">▾</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              DepOwl is optimized for text-based PDFs. It can also support RTF and structured text exports depending on the workflow. If a PDF is image-based, DepOwl flags it up front so you can choose OCR or an alternate export.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            How long does it take to get started?
+            <span class="faq-chevron">▾</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Fast. Bring one real transcript and we&rsquo;ll run a guided demo that mirrors your delivery process. From there, onboarding is mainly about file intake preferences and output formatting.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Does this replace the reporter?
+            <span class="faq-chevron">▾</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              No&mdash;DepOwl is designed to make the reporter faster and more confident. It surfaces high-signal issues, assigns priorities, and packages the output so the human verifier can approve quickly.
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can it handle large page counts?
+            <span class="faq-chevron">▾</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes. DepOwl processes in dependable chunks (often 50 pages) to keep runs predictable and reduce format-related failures&mdash;especially on long transcripts.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────── CTA BANNER ─────── -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>
+          Bring one transcript. Leave with clarity.
+        </h2>
+        <p>
+          We&rsquo;ll run DepOwl on a real job and show you the exact output&mdash;corrections, flags, RWSE confidence, and index checks&mdash;ready for verification.
+        </p>
+        <a href="mailto:hello@depowl.com" class="btn btn-primary" style="font-size:1rem;padding:.9rem 2.25rem;">
+          Request a Demo
+        </a>
+        <div class="cta-features">
+          <span class="tag">Your File</span>
+          <span class="tag">Live Walkthrough</span>
+          <span class="tag">No Hard Sell</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────── FOOTER ─────── -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#" class="footer-logo">
+          Dep<span>Owl</span>
+        </a>
+        <nav class="footer-links">
+          <a href="#use-cases">Workflows</a>
+          <a href="#platform">How It Works</a>
+          <a href="#security">Security</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <p class="footer-copy">
+          &copy; 2026 DepOwl. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
