@@ -8,7 +8,7 @@
   --bg-raised:   #fdfae7;
   --border:      rgba(14, 20, 18, .12);
 
-  --accent:      #0E1412;
+  --accent:      #15311a;
   --accent-dim:  rgba(14, 20, 18, .1);
   --accent-glow: rgba(14, 20, 18, .22);
 
@@ -70,7 +70,7 @@ ul { list-style: none; }
 .section-sub {
   color: var(--text-2);
   font-size: 1.05rem;
-  max-width: 56ch;
+  max-width: 84ch;
   line-height: 1.7;
 }
 .btn {
@@ -172,8 +172,8 @@ nav {
 }
 .logo {
   font-family: var(--ff-display);
-  font-size: 1.55rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 900;
   color: var(--text-1);
   letter-spacing: .03em;
 }
@@ -257,21 +257,21 @@ nav {
 }
 .hero h1 {
   font-family: var(--ff-display);
-  font-size: clamp(3rem, 7vw, 6rem);
+  font-size: clamp(3rem, 7vw, 5rem);
   font-weight: 700;
   line-height: 1.05;
   letter-spacing: -.01em;
   margin-bottom: 1.5rem;
-  max-width: 15ch;
+  max-width: 21ch;
 }
 .hero h1 em {
-  font-style: italic;
+  font-style: normal;
   color: var(--accent);
 }
 .hero-sub {
   font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--text-2);
-  max-width: 52ch;
+  max-width: 55ch;
   line-height: 1.75;
   margin-bottom: 2.5rem;
 }
