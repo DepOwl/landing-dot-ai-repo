@@ -271,7 +271,7 @@ nav {
 .hero-sub {
   font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--text-2);
-  max-width: 55ch;
+  max-width: 58ch;
   line-height: 1.75;
   margin-bottom: 2.5rem;
 }
@@ -310,7 +310,7 @@ nav {
 ════════════════════════════════════════════════ */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 1rem;
   margin-top: 3rem;
 }
@@ -340,14 +340,24 @@ nav {
 }
 .card:hover::before { opacity: 1; }
 .card-icon {
-  width: 42px; height: 42px;
+  width: 42px;
+  height: 42px;
   border-radius: 10px;
-  background: var(--accent-dim);
+  background: #d6d0be;
   border: 1px solid rgba(14, 20, 18, .2);
+  margin-bottom: 1.1rem;
+  flex-shrink: 0;
+}
+div.card-icon {
   display: grid;
   place-items: center;
   font-size: 1.2rem;
-  margin-bottom: 1.1rem;
+}
+img.card-icon {
+  display: block;
+  padding: 6px;
+  box-sizing: border-box;
+  object-fit: contain;
 }
 .card h3 {
   font-size: 1rem;

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Reporting firms">
+  <g fill="none" stroke="#0B2344" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 22 32 9l24 13H8Z" fill="#FFFDF6"/>
+    <path d="M11 24h42M12 50h40M8 55h48"/>
+    <path d="M16 25v25M26 25v25M38 25v25M48 25v25"/>
+  </g>
+  <path d="M12 20 32 11l20 9H12Z" fill="#D7A42A" opacity=".88"/>
+  <path d="M18 28h6v18h-6zM28 28h6v18h-6zM40 28h6v18h-6z" fill="#FFFDF6"/>
+  <path d="M16 47h32" stroke="#D7A42A" stroke-width="3.2" stroke-linecap="round"/>
+</svg>
