@@ -271,7 +271,7 @@ nav {
 .hero-sub {
   font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--text-2);
-  max-width: 55ch;
+  max-width: 58ch;
   line-height: 1.75;
   margin-bottom: 2.5rem;
 }
@@ -310,7 +310,7 @@ nav {
 ════════════════════════════════════════════════ */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 1rem;
   margin-top: 3rem;
 }
@@ -342,7 +342,10 @@ nav {
 .card-icon {
   width: 42px; height: 42px;
   border-radius: 10px;
+  /*
   background: var(--accent-dim);
+  */
+  background: #d6d0be;
   border: 1px solid rgba(14, 20, 18, .2);
   display: grid;
   place-items: center;

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Stenographer schools">
+  <g fill="none" stroke="#0B2344" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 24 32 12l24 12-24 12L8 24Z" fill="#FFFDF6"/>
+    <path d="M18 29v11c8 7 20 7 28 0V29"/>
+    <path d="M50 27v15"/>
+  </g>
+  <path d="M16 24 32 16l16 8-16 8-16-8Z" fill="#D7A42A" opacity=".9"/>
+  <circle cx="50" cy="44" r="3" fill="#D7A42A" stroke="#0B2344" stroke-width="1.8"/>
+  <path d="M50 47l-2 6h4l-2-6Z" fill="#D7A42A" stroke="#0B2344" stroke-width="1.5"/>
+</svg>
