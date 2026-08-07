@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Lock and key">
+  <title>Lock and key</title>
+
+  <g fill="none" stroke="#0B2344" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- softly rounded shackle -->
+    <path d="M14.5 26v-7.2C14.5 11.4 20 6 27 6s12.5 5.4 12.5 12.8V26" fill="#FFFDF6"/>
+
+    <!-- lock body -->
+    <rect x="7" y="24.5" width="38" height="31" rx="7" fill="#FFFDF6"/>
+  </g>
+
+  <!-- accent band, matching the existing icon set -->
+  <rect x="10.5" y="29" width="31" height="6.5" rx="3.25" fill="#D7A42A" stroke="#0B2344" stroke-width="1.7"/>
+
+  <!-- substantial key -->
+  <path d="M45.5 39H31.5l-4.5 4.5v7h5v-4h4.5v-3.2h9"
+        fill="#D7A42A" stroke="#0B2344" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="52" cy="39" r="7.5" fill="#D7A42A" stroke="#0B2344" stroke-width="2.6"/>
+  <circle cx="52" cy="39" r="3" fill="#FFFDF6" stroke="#0B2344" stroke-width="1.7"/>
+
+  <!-- subtle shackle highlight -->
+  <path d="M19 12.3c2.1-1.8 4.7-2.8 7.6-2.8" fill="none" stroke="#D7A42A" stroke-width="2.2" stroke-linecap="round"/>
+</svg>

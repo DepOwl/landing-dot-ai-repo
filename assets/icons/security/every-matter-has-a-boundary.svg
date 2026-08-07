@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Every Matter Has a Boundary">
+  <title>Every Matter Has a Boundary</title>
+
+  <!-- isolated matter containers -->
+  <g fill="none" stroke="#0B2344" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="7.5" y="11" width="21" height="42" rx="4.5" fill="#FFFDF6"/>
+    <rect x="35.5" y="11" width="21" height="42" rx="4.5" fill="#FFFDF6"/>
+    <path d="M12 20h12M40 20h12"/>
+    <!-- separate internal paths -->
+    <path d="M13 30h5v8h5"/>
+    <path d="M41 39h5v-8h5"/>
+  </g>
+
+  <!-- distinct matter tabs -->
+  <rect x="12" y="8" width="12" height="6" rx="3" fill="#D7A42A" stroke="#0B2344" stroke-width="2"/>
+  <rect x="40" y="8" width="12" height="6" rx="3" fill="#D7A42A" stroke="#0B2344" stroke-width="2"/>
+
+  <!-- hard boundary between jobs -->
+  <path d="M32 14v36" stroke="#D7A42A" stroke-width="3.2" stroke-linecap="round"/>
+
+  <!-- path endpoints -->
+  <circle cx="13" cy="30" r="2.2" fill="#D7A42A" stroke="#0B2344" stroke-width="1.6"/>
+  <circle cx="23" cy="38" r="2.2" fill="#D7A42A" stroke="#0B2344" stroke-width="1.6"/>
+  <circle cx="41" cy="39" r="2.2" fill="#D7A42A" stroke="#0B2344" stroke-width="1.6"/>
+  <circle cx="51" cy="31" r="2.2" fill="#D7A42A" stroke="#0B2344" stroke-width="1.6"/>
+</svg>
