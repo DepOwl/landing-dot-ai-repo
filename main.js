@@ -175,7 +175,6 @@ window.addEventListener('resize', () => {
     form.reset();
     setStatus('', false);
     renderedAt = Date.now();
-    renderTurnstile();
   }
 
   function openModal() {
@@ -184,6 +183,7 @@ window.addEventListener('resize', () => {
     modal.hidden = false;
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('demo-modal-open');
+    requestAnimationFrame(() => renderTurnstile());
     const firstInput = form.querySelector('input, select, textarea, button');
     if (firstInput instanceof HTMLElement) firstInput.focus();
   }
@@ -210,12 +210,6 @@ window.addEventListener('resize', () => {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !modal.hidden) closeModal();
   });
-
-  if (typeof turnstile !== 'undefined') {
-    renderTurnstile();
-  } else {
-    window.addEventListener('load', renderTurnstile);
-  }
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
