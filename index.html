@@ -36,7 +36,7 @@
       <a href="#platform">How It Works</a>
       <a href="#security">Security</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact" class="btn btn-primary">Book a Demo</a>
+      <a href="#contact" class="btn btn-primary demo-open">Book a Demo</a>
     </div>
   </header>
 
@@ -57,7 +57,7 @@
         conventions. 
       </p>
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">View A Demo</a>
+        <a href="#contact" class="btn btn-primary demo-open">View A Demo</a>
         <a href="#use-cases" class="btn btn-ghost">Find Your Use Case</a>
         <a href="#platform" class="btn btn-ghost">How It Works</a>
       </div>
@@ -73,7 +73,7 @@
         </div>
         <div class="stat-item">
           <div class="stat-number">zero</div>
-          <div class="stat-label">Fabrications</div>
+          <div class="stat-label">Invented Text</div>
         </div>
         <div class="stat-item">
           <div class="stat-number">7 layers</div>
@@ -934,7 +934,7 @@
                   <div class="faq-a-inner">
                     <p>Upload a transcript, choose your turnaround, and get your report back.</p>
                     <p>No contract, no onboarding call, no software to install, no big changes to your usual workflow.</p>
-                    <p><a href="#contact" class="btn btn-primary">Get Started</a></p>
+                    <p><a href="#contact" class="btn btn-primary demo-open">Get Started</a></p>
                   </div>
                 </div>
               </div>
@@ -964,7 +964,7 @@
         <p>
           Send us a completed record and see what DepOwl finds after everyone else is done looking. We’ll show you the findings, explain what was flagged and why, and leave every final decision with you.
         </p>
-        <a href="#" class="btn btn-primary" style="font-size:1rem;padding:.9rem 2.25rem;">
+        <a href="#contact" class="btn btn-primary demo-open" style="font-size:1rem;padding:.9rem 2.25rem;">
           See DepOwl in Action
         </a>
         <div class="cta-features">
@@ -996,6 +996,87 @@
     </div>
   </footer>
 
+  </footer>
+
+  <!-- Demo request modal -->
+  <div class="demo-modal" id="demo-modal" hidden aria-hidden="true">
+    <div class="demo-modal__backdrop" data-demo-close></div>
+    <div
+      class="demo-modal__dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="demo-modal-title"
+    >
+      <button type="button" class="demo-modal__close" data-demo-close aria-label="Close">
+        &times;
+      </button>
+      <h2 id="demo-modal-title" class="demo-modal__title">Request a DepOwl demo</h2>
+      <p class="demo-modal__lead">
+        Tell us who you are and we will follow up to arrange a walkthrough on a real transcript.
+      </p>
+
+      <form id="demo-form" class="demo-form" novalidate>
+        <div class="demo-form__row">
+          <label class="demo-form__field">
+            <span>First name</span>
+            <input type="text" name="first_name" required autocomplete="given-name" />
+          </label>
+          <label class="demo-form__field">
+            <span>Last name</span>
+            <input type="text" name="last_name" required autocomplete="family-name" />
+          </label>
+        </div>
+        <label class="demo-form__field">
+          <span>Work email</span>
+          <input type="email" name="email" required autocomplete="email" />
+        </label>
+        <label class="demo-form__field">
+          <span>Organization</span>
+          <input type="text" name="organization" required autocomplete="organization" />
+        </label>
+        <label class="demo-form__field">
+          <span>Your role</span>
+          <select name="litigation_role" required>
+            <option value="">Select one…</option>
+            <option value="court_reporter">Court reporter</option>
+            <option value="scopist">Scopist</option>
+            <option value="proofreader">Proofreader</option>
+            <option value="reporting_firm">Reporting firm</option>
+            <option value="transcriptionist">Transcriptionist</option>
+            <option value="stenographer_school">Stenographer school</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+        <label class="demo-form__field">
+          <span>Message <em>(optional)</em></span>
+          <textarea name="message" rows="3" placeholder="Anything we should know before we reach out?"></textarea>
+        </label>
+
+        <!-- Honeypot -->
+        <label class="demo-form__hp" aria-hidden="true">
+          <span>Company website</span>
+          <input type="text" name="company_website" tabindex="-1" autocomplete="off" />
+        </label>
+
+        <div class="demo-form__turnstile" id="demo-turnstile"></div>
+
+        <p class="demo-form__status" id="demo-form-status" role="status" aria-live="polite"></p>
+
+        <button type="submit" class="btn btn-primary demo-form__submit" id="demo-form-submit">
+          Send request
+        </button>
+      </form>
+
+      <div class="demo-form__success" id="demo-form-success" hidden>
+        <h3>Request received</h3>
+        <p>Thank you. We will review your request and follow up at the email you provided.</p>
+        <button type="button" class="btn btn-primary" data-demo-close>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <script src="demo-config.js"></script>
   <script src="main.js"></script>
 </body>
 </html>

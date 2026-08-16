@@ -1,0 +1,9 @@
+# Local demo form config (copy from demo-config.example.js)
+demo-config.js
+
+# Local/editor
+.cursor/
+
+# Backups and archives
+bak/
+*.zip
