@@ -152,15 +152,75 @@ window.addEventListener('resize', () => {
   let renderedAt = 0;
   let turnstileWidgetId = null;
   let lastFocused = null;
+  let turnstileScriptListenerAttached = false;
 
-  function renderTurnstile() {
-    if (!turnstileHost || !config.turnstileSiteKey) return;
+  function mountTurnstileWidget() {
+    if (modal.hidden || !turnstileHost || !config.turnstileSiteKey) return;
     if (typeof turnstile === 'undefined') return;
+
+    if (turnstileWidgetId != null) {
+      try {
+        turnstile.remove(turnstileWidgetId);
+      } catch (_) {
+        /* widget may already be gone */
+      }
+      turnstileWidgetId = null;
+    }
+
     turnstileHost.innerHTML = '';
     turnstileWidgetId = turnstile.render(turnstileHost, {
       sitekey: config.turnstileSiteKey,
       theme: 'light',
     });
+  }
+
+  function runWhenTurnstileReady(callback) {
+    if (typeof turnstile !== 'undefined' && typeof turnstile.ready === 'function') {
+      turnstile.ready(callback);
+      return;
+    }
+    if (typeof turnstile !== 'undefined') {
+      callback();
+      return;
+    }
+
+    const attachScriptListener = () => {
+      if (turnstileScriptListenerAttached) return;
+      const script = document.querySelector(
+        'script[src*="challenges.cloudflare.com/turnstile"]',
+      );
+      if (!script) return;
+      turnstileScriptListenerAttached = true;
+      script.addEventListener(
+        'load',
+        () => {
+          if (typeof turnstile !== 'undefined' && typeof turnstile.ready === 'function') {
+            turnstile.ready(callback);
+          } else {
+            callback();
+          }
+        },
+        { once: true },
+      );
+    };
+
+    attachScriptListener();
+    window.addEventListener(
+      'load',
+      () => {
+        if (typeof turnstile !== 'undefined' && typeof turnstile.ready === 'function') {
+          turnstile.ready(callback);
+        } else if (typeof turnstile !== 'undefined') {
+          callback();
+        }
+      },
+      { once: true },
+    );
+  }
+
+  function scheduleTurnstileRender() {
+    if (modal.hidden || !turnstileHost || !config.turnstileSiteKey) return;
+    runWhenTurnstileReady(mountTurnstileWidget);
   }
 
   function setStatus(message, isError) {
@@ -183,7 +243,7 @@ window.addEventListener('resize', () => {
     modal.hidden = false;
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('demo-modal-open');
-    requestAnimationFrame(() => renderTurnstile());
+    requestAnimationFrame(() => scheduleTurnstileRender());
     const firstInput = form.querySelector('input, select, textarea, button');
     if (firstInput instanceof HTMLElement) firstInput.focus();
   }
@@ -193,6 +253,15 @@ window.addEventListener('resize', () => {
     modal.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('demo-modal-open');
     setStatus('', false);
+    if (turnstileWidgetId != null && typeof turnstile !== 'undefined') {
+      try {
+        turnstile.remove(turnstileWidgetId);
+      } catch (_) {
+        /* ignore */
+      }
+      turnstileWidgetId = null;
+    }
+    if (turnstileHost) turnstileHost.innerHTML = '';
     if (lastFocused instanceof HTMLElement) lastFocused.focus();
   }
 
