@@ -229,14 +229,16 @@ nav {
   border-bottom: 1px solid var(--border);
 }
 .mobile-menu.open { display: flex; }
-.mobile-menu a {
+.mobile-menu a:not(.btn) {
   padding: 1rem 1.5rem;
   font-size: .95rem;
   color: var(--text-2);
   border-bottom: 1px solid var(--border);
   transition: color .15s, background .15s;
 }
-.mobile-menu a:hover { color: var(--text-1); background: var(--bg-raised); }
+.mobile-menu a:not(.btn):hover { color: var(--text-1); background: var(--bg-raised); }
+.mobile-menu .btn-primary,
+.mobile-menu .btn-primary:hover { color: #fdfae7; }
 .mobile-menu .btn { margin: 1rem 1.5rem; width: fit-content; }
 
 @media (max-width: 768px) {

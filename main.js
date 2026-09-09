@@ -1,6 +1,12 @@
 // ── Hamburger menu ───────────────────────────────────────────────
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
+const desktopNav = window.matchMedia('(min-width: 769px)');
+
+function closeMobileMenu() {
+  hamburger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+}
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('open');
@@ -8,10 +14,11 @@ hamburger.addEventListener('click', () => {
 });
 
 mobileMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    mobileMenu.classList.remove('open');
-  });
+  link.addEventListener('click', closeMobileMenu);
+});
+
+desktopNav.addEventListener('change', (e) => {
+  if (e.matches) closeMobileMenu();
 });
 
 // ── Agent tabs ───────────────────────────────────────────────────
