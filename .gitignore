@@ -1,0 +1,6 @@
+# Local/editor
+.cursor/
+
+# Backups and archives
+bak/
+*.zip
